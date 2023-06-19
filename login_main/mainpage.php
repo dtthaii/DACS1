@@ -42,7 +42,7 @@ if (!empty($_SESSION["id"])) {
     <!-- <a href="logout.php"><input class="block-button" type="button" value="Log Out" id="connectWallet"></a> -->
     <ul>
       <li>
-        <img src="/prf.png" class="profile">
+        <img src="/CRYPTO FINANCE/image/prf.png" class="profile">
         <ul>
           <li class="sub-item">
             <span class="material-icons-outlined"> manage_accounts </span>
