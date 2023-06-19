@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockVerse</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+</head>
+
+<body>
+    <!-- Mobile Menu -->
+    <div class="menu-btn">
+        <span class="menu-btn-icon">&nbsp;</span>
+    </div>
+    <!-- End Mobile Menu -->
+    <!-- Navbar -->
+    <div class="navbar flex flex-sb">
+        <div class="brand"><a href="/CRYPTO FINANCE/login_main/mainpage.php">BlockVerse</a></div>
+        <div class="nav-links flex flex-sb">
+            <a href="/CRYPTO FINANCE/login_main/mainpage.php" class="nav-link">Home</a>
+            <a href="/CRYPTO FINANCE/overview/index.html" class="nav-link">Market</a>
+            <a href="/CRYPTO FINANCE/nfts page/index.html" class="nav-link">NFTs</a>
+            <a href="#offers" class="nav-link active">Wallet</a>
+            <a href="/CRYPTO FINANCE/news/index.html" class="nav-link">News</a>
+        </div>
+        <input class="block-button" type="button" value="Connect Wallet" id="connectWallet">
+    </div>
+
+    <main class="container">
+        <section class="ui">
+            <div class="container-left">
+                <form id="credit-card">
+                    <div class="number-container">
+                        <label>Card Number</label>
+                        <input type="text" name="card-number" id="card-number" maxlength="19" placeholder="1234 5678 9101 1121"
+                        required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="name-container">
+                        <label>Holder</label>
+                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="NGUYEN DINH DUY THAI"
+                        required
+                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                    </div>
+                    <div class="infos-container">
+                        <div class="expiration-container">
+                            <label>Valid-thru</label>
+                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5" placeholder="02/24"
+                            required
+                            
+                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                        <div class="cvv-container">
+                            <label>CVV</label>
+                            <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234"
+                            required
+                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                    </div>
+                    <input type="submit" value="ADD" id="add">
+                </form>
+            </div>
+            <div class="container-right">
+                <div class="card">
+                    <div class="intern">
+                        <img class="approximation" src="/CRYPTO FINANCE/image/aprox.png" alt="aproximation">
+                        <div class="card-number">
+                            <div class="number-vl">1234 5678 9101 1121</div>
+                        </div>
+                        <div class="card-holder">
+                            <label>Holder</label>
+                            <div class="name-vl">NGUYEN DINH DUY THAI</div>
+                        </div>
+                        <div class="card-infos">
+                            <div class="exp">
+                                <label>valid-thru</label>
+                                <div class="expiration-vl">02/40</div>
+                            </div>
+                            <div class="cvv">
+                                <label>CVV</label>
+                                <div class="cvv-vl">123</div>
+                            </div>
+                        </div>
+                        <img class="chip" src="/CRYPTO FINANCE/image/chip.png" alt="chip">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="balance">
+            <div class="donut-chart">
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="total-assets">
+                <!-- <div class="assets-texts">
+                    <h2>Revenue</h2>
+                    <h1>$245,234.09</h1>
+                </div> -->
+                <div class="assets-elements">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div class="footer flex flex-sb">
+        <div class="brand">BlockVerse</div>
+        <div class="footer-menu flex flex-sb">
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-1.png" alt="Social">
+            </a>
+
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-2.png" alt="Social">
+            </a>
+
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-3.png" alt="Social">
+            </a>
+
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-4.png" alt="Social">
+            </a>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.js"
+        integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="donut-chart.js"></script>
+
+</body>
+
+</html>

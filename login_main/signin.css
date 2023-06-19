@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root
+{
+    --bg-color: #black;
+    --lgbt-color: #cfcfcf;
+    --lg-color: #313131;
+    --sg-color: #fefefe;
+    --text-color: #fff;
+    --fb-color: #3B5998;
+    --bt-color: #7a7a7a;
+}
+body
+{
+   min-height: 100vh;
+   display: flex;
+   background-color: #000000;
+   /* background-image: linear-gradient(to right, #434343 0%, #000000 74%); */
+   
+}
+
+.side
+{
+    /* display: none; */
+    width: 50%;
+}
+.side img
+{       
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.main
+{
+    background-image: linear-gradient(to right, #434343 0%, #000000 74%);
+    width: 50%;
+}
+
+.login__container
+{   
+    height: 100vh;
+    width: 80%;
+    /* background: rgb(234, 136, 136); */
+    max-width: 450vh;
+    padding: 24px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.title
+{
+    padding-top: 40px;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--lgbt-color);
+    margin-left: 18%;
+}
+.welcome-message
+{
+    font-size: 1rem;
+    line-height: 28px;
+    margin-bottom: 30px;
+    color: #9898987e;
+    margin-left: 18%;
+}
+.login{
+    margin-left: 15%;
+}
+.login__form
+{   
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    /* margin-left: 20%; */
+}
+.form__control
+{
+    width: 100%;
+    position: relative;
+}
+input
+{
+    background-color: var(--bt-color);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+.form__control input
+{
+    width: 100%;
+    background: #343434;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    padding: 14px 20px;
+    margin: 10px 0;
+}
+.login__function
+{
+    font-size: 0.9rem;
+    /* width: ; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    color: var(--text-color);
+}
+.login__function a
+{
+    color: var(--text-color);
+}
+.remember-checkbox
+{
+    position: relative;
+    top: 10%;
+    padding-top: 2px;
+    cursor: pointer;
+}
+.marterial-checkbox label
+{
+    cursor: pointer;
+}
+.login__buttons .login 
+{
+    background-image: linear-gradient(147deg, #000000 0%,#434343 74%);
+    padding: 8px 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 0.9em;
+    margin: 0 0 30px 0;
+    color: var(--text-color);
+    /* text-decoration: none; */
+}
+.login__buttons a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.login__buttons .another
+{
+    background-color: var(--fb-color);
+    padding: 8px 0;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+.login__buttons .gg
+{
+    border: 1px solid #b5b4b4;
+    background-color: #1d1d1d;
+    margin-top: 10px;
+}
+.another i 
+{
+    padding-right: 15px;
+}
+.signin__label
+{
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.signin__label a
+{
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--sg-color);
+    font-weight: 700;
+    padding-left: 5px;
+}
+.login__bottom
+{
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    transform: translateX(-50%);
+    margin-left: 15%;
+}
+.login__bottom p, .login__bottom div
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #a5a5a5;
+    font-weight: 500;
+    text-decoration: none;
+}
+.login__bottom a
+{
+    padding-left: 5px;
+    color: var(--bt-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) 
+{
+    .login__container
+    {
+        width: 100%;
+    }
+    .side
+    {
+        display: none;
+    }
+    .main
+    {
+        width: 100%;
+    }
+}

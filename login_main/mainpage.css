@@ -1,0 +1,830 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bg: #10081a;
+  --primary-1: #4ca9df;
+  --primary-2: #292e91;
+  --white: #fff;
+  --text: #e6d9f5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+    background: var(--bg);
+    height: 100vh;
+    overflow-x: hidden;
+    color: var(--white);
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-sb {
+    justify-content: space-between;
+}
+.w-100 {
+    width: 100%;
+}
+.section {
+    padding: 60px 10px;
+}
+
+*::selection{
+    background-color: var(--primary-1);
+    color: var(--black);
+  }
+  
+  *::-webkit-scrollbar{
+    height: .5rem;
+    width:1rem;
+  }
+  
+  *::-webkit-scrollbar-track{
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb{
+    background-color:var(--primary-1);
+  }
+  
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 30px;
+    background: rgba(16, 8, 26, 0.3);
+    z-index: 9;
+    color: var(--text);
+}
+.navbar-solid {
+    background: rgba(16, 8, 26, 1);
+    transition: 0.3s linear;
+    box-shadow: 1px 1px 0px rgba(252, 240, 255, 0.2);
+}
+.brand {
+    font-size: 3.6rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.nav-links {
+    flex: 0 0 33%;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 2rem;
+    padding: 5px 0;
+    font-weight: 300;
+}
+
+.nav-link.active {
+    font-weight: 700;
+    border-bottom: 1px solid var(--primary-1);
+}
+
+.block-button {
+    display: inline-block;
+    background: linear-gradient(93.23deg,
+    var(--primary-1) 0%,
+    var(--primary-2) 100%);
+    padding: 14px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+/* End Navbar */
+
+/* Hero Section */
+
+.hero {
+    background-image: url(/CRYPTO\ FINANCE/image/hero-bg.png);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    max-height: 800px;
+    color: var(--text);
+}
+.hero-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg,
+    rgba(16, 8, 25, 0.3) 0%,
+    var(--bg) 100%);
+    backdrop-filter: blur(20px);
+    z-index: 1;
+}
+.hero-overlay img {
+    width: 10rem;
+    position: absolute;
+    top: 120px;
+    pointer-events: none;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-overlay img:nth-of-type(1) {
+    left: 120px;
+    animation-delay: 2s;
+} 
+.hero-overlay img:nth-of-type(2) {
+    left: 300px;
+    top: 150px;
+    animation-delay: 3s;
+} 
+.hero-overlay img:nth-of-type(3) {
+    right: 160px;
+    animation-delay: 1s;
+} 
+.hero-overlay img:nth-of-type(4) {
+    left: 60px;
+    top: 320px;
+    animation-delay: 3s;
+} 
+.hero-overlay img:nth-of-type(5) {
+    right: 100px;
+    top: 300px;
+}
+.hero-overlay img:nth-of-type(6) {
+    top: unset;
+    bottom: 30px;
+    left: 300px;
+    animation-delay: 2s;
+}
+.hero-overlay img:nth-of-type(7) {
+    top: unset;
+    bottom: 190px;
+    right: 290px;
+}
+.hero-overlay img:nth-of-type(8) {
+    top: unset;
+    bottom: 20px;
+    right: 140px;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(0, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.hero-content {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    text-align: center;
+}
+.hero-heading {
+    font-size: 5.4rem;
+    line-height: 80px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+.hero-heading span {
+    background: linear-gradient(to right, 
+    #004E9A 0%,
+    #428CD4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-content .block-button {
+    font-size: 1.8rem;
+    padding: 14px 50px;
+    margin-top: 30px;
+}
+.hero-content p {
+    font-size: 1.8rem;
+    line-height: 28px;
+    font-weight: 300;
+    width: 35%;
+    text-transform: capitalize;
+    margin: 20px 32.5%;
+}
+
+.scroll-btn {
+    display: block;
+    margin-top: 40px;
+}
+
+.scroll-btn img {
+    width: 50px;
+}
+/* End Hero Section  */
+
+/* Features Section */
+
+.section-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--white);
+    margin-top: 25px;
+}
+.features-container {
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.feature {
+    width: 32%;
+    height: 420px;
+    border: 1px solid var(--primary-1);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+.feature-image {
+    width: 100%;
+    height: 200px;
+    background-image: url(/CRYPTO\ FINANCE/image/features-1.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: float 3s ease-in-out infinite;
+}
+.feature:nth-of-type(2) .feature-image {
+    background-image: url(/CRYPTO\ FINANCE/image/features-2.png);
+    animation-delay: 1s;    
+}
+.feature:nth-of-type(3) .feature-image {
+    background-image: url(/CRYPTO\ FINANCE/image/features-3.png);
+    animation-delay: 1s;
+}
+.feature a{
+    text-decoration: none;
+    color: var(--white);
+}
+.feature h4 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin: 20px 0;    
+}
+.feature p {
+    font-size: 1.4rem;
+    line-height: 25px;
+}
+.feature:hover {
+    border-color: var(--text);
+    transition: 0.4s linear;
+}
+/* End Features Section */
+
+/* Offers Section */
+
+.offers-container {
+    width: 80%;
+    margin: 50px 10%;
+}
+.offers-image {
+    width: 35%;
+    height: 460px;
+    background-image: url(/CRYPTO\ FINANCE/image/offers-img.png);
+    background-size: 70%;
+    background-position: left;
+    background-repeat: no-repeat;
+    animation: float 3s ease-in-out infinite;
+}
+.offers-content {
+    width: 48%;
+}
+.offer {
+    text-align: left;
+    margin: 20px 0;
+    width: 100%;
+}
+.offer h4 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+.section-text {
+    line-height: 25.6px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color:rgba(252, 240, 255, 0.6)
+}
+.offer p {
+    line-height: 160%;
+    margin-top: 20px;
+}
+/* End Offers Section */
+
+/* Investors Section */
+
+.investors-container {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+.investors-container img {
+    width: 280px;
+    pointer-events: none;
+}
+.investor {
+    margin: 25px;
+    cursor: pointer;
+}
+/* End Investors Section  */
+
+/* Account Section */
+
+
+.account-container {
+    width: 85%;
+    margin: 40px 7.5%;
+}
+.account-image {
+    width: 48%;
+    height: 400px;
+    background-image: url(/CRYPTO\ FINANCE/image/account-img.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    animation: float 3s ease-in-out infinite;
+}
+.account-content {
+    width: 48%;
+}
+.account-content p {
+    width: 80%;
+    margin-bottom: 30px;
+}
+/* End Account Section */
+
+/* Subscribe Section */
+
+.subscribe-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.subscribe-container img {
+    margin-bottom: 20px;
+    width: 340px;
+    margin: 30px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.subscribe-container p {
+    font-size: 16px;
+}
+
+.get-notified {
+    width: 50%;
+    margin: 40px 25%;
+    background: rgba(252, 240, 255, 0.05);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.get-notified input {
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    color: var(--text-);
+}
+.get-notified .block-button {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    border-radius: 50px;
+}
+/* End Subscribe Section */
+
+/* Footer */
+
+.footer {
+    background: #000;
+    padding: 20px 25px;
+}
+.footer-menu {
+    width: 20%;
+}
+.footer-menu img {
+    width: 18px;
+}
+/* End Footer */
+
+.menu-btn {
+    display: none;
+}
+
+/* Responsiveness */
+
+@media (min-width: 1420px) {
+    html {
+        font-size: 12px;
+    }
+
+    .hero-content {
+        top: 210px;
+    }
+
+    .feature {
+        height: 440px;
+    }
+    
+    .feature-image {
+        height: 230px;
+    }
+} 
+
+@media (min-width: 1645px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero-content {
+        top: 290px;
+    }
+
+    .hero-content p {
+        margin: 50px auto;
+    }
+
+    .section:not(.home) {
+        padding: 60px 100px;
+    }
+
+    .feature {
+        height: 520px;
+    }
+    
+   .feature-image {
+        height: 250px;
+    }
+    
+    .feature h4 {
+        margin: 30px 0;
+    }
+
+    .offers-image {
+        height: 580px;
+    }
+}
+
+@media (max-width: 1330px) {
+    .hero-content p {
+        width: 45%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 1150px) {
+    .feature-image {
+        height: 175px;
+    }
+    .features h4 {
+        margin: 14px 0;
+    }
+    .features {
+        padding: 15px;
+    }
+    .offer {
+        margin: 15px 0;
+    }
+    .offer p {
+        margin-top: 10px;
+    }
+    .investors-container img {
+        width: 220px;
+    }
+    .features-container {
+        padding: 0 10px;
+    }
+    .section {
+        padding: 45px 5px;
+    }
+    .hero-content p {
+        width: 60%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 9px;
+    }
+    .nav-links {
+        flex: 0 0 40%;
+    }
+    .block-button {
+        padding: 10px 18px;
+    } 
+    .hero-content .block-button {
+        padding: 12px 35px;
+        margin-top: 14px;
+    }
+    .hero-heading {
+        line-height: 60px;
+    }
+    .scroll-btn {
+        margin-top: 18px;
+    }
+    .scroll-btn img {
+        width: 40px;
+    }
+    .hero-overlay img {
+        width: 80px;
+    }
+    .hero-overlay img:nth-of-type(2),
+    .hero-overlay img:nth-of-type(5),
+    .hero-overlay img:nth-of-type(7) {
+        display: none;
+    }
+    .feature-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .feature {
+        width: 100%;
+    }
+    .feature p{
+        display: none;
+    }
+    .feature:last-child {
+        margin: 0 50%;
+    }
+    .offer {
+        margin: 10px 0;
+    }
+    .offer p {
+        margin-top: 5px;
+    }
+    .get-notified input {
+        padding: 15px;
+    }
+    .footer-menu {
+        width: 28%;
+    }
+}
+
+@media (max-width: 740px) {
+    html {
+        font-size: 8px;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .hero-content p {
+        width: 80%;
+        margin: 12px 10%;
+        font-size: 1.4rem;
+    }
+    .hero-content .block-button {
+        margin-top: 10px;
+        transform: scale(0.8);
+    }
+    .hero-content {
+        top: 80px;
+    }
+    .hero-overlay img {
+        display: none;
+    }
+    .hero-heading {
+        font-size: 4rem;
+    }
+    .section-heading {
+        font-size: 3rem;
+    }
+    .navbar {
+        flex-direction: column;
+        height: 80vh;
+        background: var(--bg);
+        padding: 30px 0; 
+        border: 1px solid var(--primary-1);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 94%;
+        margin: 0 2.5%;
+        border-top-color: transparent;
+        transition: 0.5s ease;
+        transform: translateY(-1300px);
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+    .menu-btn {
+        display: block;
+        background-color: var(--primary-1);
+        height: 45px;
+        width: 45px;
+        position: fixed;
+        top: 22px;
+        right: 40px;
+        z-index: 2222;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+    }
+    .menu-btn-icon,
+    .menu-btn-icon::after,
+    .menu-btn-icon::before {
+        width: 25px;
+        height: 25px;
+        background-color: var(--text);
+        display: inline-block;
+        transition: all 0.2s;
+    }
+    .menu-btn-icon {
+        position: relative;
+        margin-top: 22px;
+    }
+
+    .menu-btn-icon::after,
+    .menu-btn-icon::before {
+        position: absolute;
+        content: "";
+        left: 0;
+    }
+    .menu-btn-icon::before {
+        top: 0.8rem;
+    }
+    .menu-btn-icon::after {
+        top: -0.8rem;
+    }
+    .menu-btn.active .menu-btn-icon {
+        background-color: transparent;
+    }
+
+    .menu-btn.active .menu-btn-icon::after {
+        transform: rotate(-135deg);
+        top: 0;
+    }
+    .menu-btn.active .menu-btn-icon::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+    .navbar.mobile {
+        transform: translateY(0);
+    }
+    .section {
+        padding: 20px 5px;
+    }
+    .offers-container,
+    .account-container {
+        flex-direction: column;
+    }
+    .offers-image,
+    .offers-content,
+    .account-image,
+    .account-content {
+        width: 100%;
+    }
+    .offers-image {
+        background-position: center;
+    }
+    .account-container {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .account-content p {
+        width: 100%;
+    }
+    .subscribe-container img,
+    .investor img {
+        width: 180px;
+    }
+    .get-notified {
+        width: 65%;
+        margin: 40px 17.5%;
+    }
+    .get-notified input {
+        padding: 12px;
+    }
+    .get-notified .block-button {
+        top: 2px;
+        right: 2px;
+    }
+    .footer-menu img {
+        width: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero {
+        max-height: 420px;
+    }
+    .hero-content p {
+        width: 95%;
+        margin: 12px 2.5%;
+        line-height: 24px;
+    }
+    .hero-heading {
+        line-height: 50px;
+    }
+    .feature-container,
+    .investors-container {
+        grid-template-columns: 1fr;
+    }
+    .features {
+        margin-top: 30px;
+    }
+    .feature:last-child {
+        margin: 0;
+    }
+    .feature {
+        height: 360px;
+    }
+    .offers-image,
+    .account-image {
+        height: 275px;
+    }
+    .investor {
+        margin: 18px 0;
+    }
+    .investors-container {
+        margin: 35px 0;
+    }
+    .section {
+        padding: 10px 2px;
+    }
+    .footer {
+        padding: 15px 25px;
+    }
+    .footer .brand {
+        display: none;
+    }
+    .footer-menu {
+        width: 75%;
+    }
+    .footer img {
+        width:  12px;
+    }
+}
+
+@media (max-width: 450px) {
+    .offers-container {
+        margin-top: 30px;
+    }
+    .offer { 
+        text-align: center;
+    }
+    .get-notified {
+        width: 90%;
+        margin: 40px 5%;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .hero {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 780px) and (orientation: landscape) {
+    .hero {
+        min-height: 400px;
+    }
+}
+
+/* End Responsiveness */
