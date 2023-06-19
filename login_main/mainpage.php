@@ -18,6 +18,7 @@ if (!empty($_SESSION["id"])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlockVerse</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 </head>
 
 <body>
@@ -38,7 +39,22 @@ if (!empty($_SESSION["id"])) {
       <a href="#account" class="nav-link">Earn</a>
     </div>
 
-    <a href="logout.php"><input class="block-button" type="button" value="Log Out" id="connectWallet"></a>
+    <!-- <a href="logout.php"><input class="block-button" type="button" value="Log Out" id="connectWallet"></a> -->
+    <ul>
+      <li>
+        <img src="/prf.png" class="profile">
+        <ul>
+          <li class="sub-item">
+            <span class="material-icons-outlined"> manage_accounts </span>
+            <p>Update Profile</p>
+          </li>
+          <li class="sub-item">
+            <a href="logout.php"><span class="material-icons-outlined"> logout </span></a>
+            <p>Logout</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
   <!-- End Navbar -->
 

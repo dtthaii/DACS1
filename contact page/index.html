@@ -16,6 +16,8 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="/CRYPTO FINANCE/contact page/style.css">
 
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
 </head>
 <body>
    
@@ -27,7 +29,7 @@
 
  <!-- Navbar -->
  <div class="navbar flex flex-sb">
-   <div class="brand">BlockVerse</div>
+   <div class="brand"><a href="/CRYPTO FINANCE/login_main/mainpage.php">BlockVerse</a></div>
    <div class="nav-links flex flex-sb">
      <a href="/CRYPTO FINANCE/login_main/mainpage.php" class="nav-link ">Home</a>
      <a href="/CRYPTO FINANCE/overview/index.html" class="nav-link">Market</a>
@@ -36,8 +38,24 @@
      <a href="/CRYPTO FINANCE/contact page/index.html" class="nav-link active">Contact</a>
    </div>
 
-   <input class="block-button" type="button" value="Join BlockVerse" id="connectWallet">
- </div>
+   <!-- <input class="block-button" type="button" value="Join BlockVerse" id="connectWallet"> -->
+   
+   <ul>
+      <li>
+          <img src="/prf.png" class="profile">
+          <ul>
+              <li class="sub-item">
+                  <span class="material-icons-outlined"> manage_accounts </span>
+                  <p>Update Profile</p>
+              </li>
+              <li class="sub-item">
+                  <a href="/CRYPTO FINANCE/login_main/signin.php"><span class="material-icons-outlined"> logout </span></a>
+                  <p>Logout</p>
+              </li>
+          </ul>
+      </li>
+  </ul>
+</div>
  <!-- End Navbar -->
 
 <!-- contact section starts  -->
