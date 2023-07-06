@@ -11,11 +11,11 @@
 
 <body>
 
-  <!-- Mobile Menu -->
-  <div class="menu-btn">
-    <span class="menu-btn-icon">&nbsp;</span>
-  </div>
-  <!-- End Mobile Menu -->
+    <!-- Mobile Menu -->
+    <div class="menu-btn">
+        <span class="menu-btn-icon">&nbsp;</span>
+    </div>
+    <!-- End Mobile Menu -->
 
   <!-- Navbar -->
   <div class="navbar flex flex-sb">

@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockVerse</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -18,7 +21,6 @@
         <span class="menu-btn-icon">&nbsp;</span>
     </div>
     <!-- End Mobile Menu -->
-    <!-- Navbar -->
     <div class="navbar flex flex-sb">
         <div class="brand"><a href="/CRYPTO FINANCE/login_main/mainpage.php">BlockVerse</a></div>
         <div class="nav-links flex flex-sb">
@@ -28,101 +30,203 @@
             <a href="#offers" class="nav-link active">Wallet</a>
             <a href="/CRYPTO FINANCE/news/index.html" class="nav-link">News</a>
         </div>
-        <input class="block-button" type="button" value="Connect Wallet" id="connectWallet">
+        <!-- <input class="block-button" type="button" value="Connect Wallet" id="connectWallet"> -->
+
+        <form class="form">
+            <label for="search">
+                <input class="input" type="text" required="" placeholder="Search coin" id="search">
+                <div class="fancy-bg"></div>
+                <div class="search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                        </g>
+                    </svg>
+                </div>
+                <button class="close-btn" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </label>
+        </form>
 
         <ul>
             <li>
-                <img src="/CRYPTO FINANCE/image/prf.png" class="profile">
+                <img src="/CRYPTO FINANCE/image/nfts21-img.png" class="profile">
                 <ul>
                     <li class="sub-item">
-                        <span class="material-icons-outlined"> manage_accounts </span>
+                        <a href="/CRYPTO FINANCE/cart/cart.html"><span class="material-icons-outlined">shopping_cart</span></a>
+                        <p>Shopping Cart</p>
+                      </li>
+                     <li class="sub-item">
+                        <a href="/CRYPTO FINANCE/account details/index.html"><span class="material-icons-outlined"> manage_accounts </span></a>
                         <p>Update Profile</p>
-                    </li>
-                    <li class="sub-item">
-                        <a href="/CRYPTO FINANCE/login_main/signin.php"><span class="material-icons-outlined"> logout </span></a>
+                     </li>
+                     <li class="sub-item">
+                        <a href="/CRYPTO FINANCE/login_main/logout.php"><span class="material-icons-outlined"> logout </span></a>
                         <p>Logout</p>
-                    </li>
+                      </li>
                 </ul>
             </li>
         </ul>
     </div>
+    <!-- End Navbar -->
 
-    <main class="container">
-        <section class="ui">
-            <div class="container-left">
-                <form id="credit-card">
-                    <div class="number-container">
-                        <label>Card Number</label>
-                        <input type="text" name="card-number" id="card-number" maxlength="19" placeholder="1234 5678 9101 1121"
-                        required
-                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+    <!-- MAIN -->
+    <section id="content">
+        <main>
+            <ul class="box-info">
+                <li>
+                    <span class="bx material-icons-outlined">
+                        payments
+                        </span>
+                    <span class="text">
+                        <h3>$325.145</h3>
+                        <p>Total</p>
+                    </span>
+                </li>
+                <li>
+                    <span class="bx material-icons-outlined">
+                        account_balance_wallet
+                        </span>
+                    <span class="text">
+                        <h3>$125,098</h3>
+                        <p>Total Balance</p>
+                    </span>
+                </li>
+                <li>
+                    <span class="bx material-icons-outlined">
+                        paid
+                    </span>
+                    <span class="text">
+                        <h3>$25.430</h3>
+                        <p>Total Revenue</p>
+                    </span>
+                </li>
+            </ul>
+
+
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Recent Orders</h3>
+                        <span class="bx material-icons-outlined">
+                            search
+                        </span>
+                        <span class="bx material-icons-outlined">
+                            filter_list
+                        </span>
                     </div>
-                    <div class="name-container">
-                        <label>Holder</label>
-                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="NGUYEN DINH DUY THAI"
-                        required
-                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Date Order</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="/CRYPTO FINANCE/image/prf.png">
+                                    <p>Wxrdie Nguyen</p>
+                                </td>
+                                <td>06-20-2023</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="/CRYPTO FINANCE/image/prf.png">
+                                    <p>Wxrdie Nguyen</p>
+                                </td>
+                                <td>06-20-2023</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="/CRYPTO FINANCE/image/prf.png">
+                                    <p>Wxrdie Nguyen</p>
+                                </td>
+                                <td>06-20-2023</td>
+                                <td><span class="status process">Process</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="/CRYPTO FINANCE/image/prf.png">
+                                    <p>Wxrdie Nguyen</p>
+                                </td>
+                                <td>06-20-2023</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="/CRYPTO FINANCE/image/prf.png">
+                                    <p>Wxrdie Nguyen</p>
+                                </td>
+                                <td>06-20-2023</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="todo">
+                    <div class="head">
+                        <h3>Todos</h3>
+                        <span class="bx material-icons-outlined">
+                            add
+                        </span>
+                        <span class="bx material-icons-outlined">
+                            filter_list
+                        </span>
                     </div>
-                    <div class="infos-container">
-                        <div class="expiration-container">
-                            <label>Valid-thru</label>
-                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5" placeholder="02/24"
-                            required
-                            
-                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
-                        </div>
-                        <div class="cvv-container">
-                            <label>CVV</label>
-                            <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234"
-                            required
-                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
-                        </div>
-                    </div>
-                    <input type="submit" value="ADD" id="add">
-                </form>
-            </div>
-            <div class="container-right">
-                <div class="card">
-                    <div class="intern">
-                        <img class="approximation" src="/CRYPTO FINANCE/image/aprox.png" alt="aproximation">
-                        <div class="card-number">
-                            <div class="number-vl">1234 5678 9101 1121</div>
-                        </div>
-                        <div class="card-holder">
-                            <label>Holder</label>
-                            <div class="name-vl">NGUYEN DINH DUY THAI</div>
-                        </div>
-                        <div class="card-infos">
-                            <div class="exp">
-                                <label>valid-thru</label>
-                                <div class="expiration-vl">02/40</div>
-                            </div>
-                            <div class="cvv">
-                                <label>CVV</label>
-                                <div class="cvv-vl">123</div>
-                            </div>
-                        </div>
-                        <img class="chip" src="/CRYPTO FINANCE/image/chip.png" alt="chip">
-                    </div>
+                    <ul class="todo-list">
+                        <li class="completed">
+                            <p>Todo List</p>
+                            <span class="bx material-icons-outlined">
+                                more_vert
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="todo-list">
+                        <li class="completed">
+                            <p>Todo List</p>
+                            <span class="bx material-icons-outlined">
+                                more_vert
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="todo-list">
+                        <li class="not-completed">
+                            <p>Todo List</p>
+                            <span class="bx material-icons-outlined">
+                                more_vert
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="todo-list">
+                        <li class="completed">
+                            <p>Todo List</p>
+                            <span class="bx material-icons-outlined">
+                                more_vert
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="todo-list">
+                        <li class="not-completed">
+                            <p>Todo List</p>
+                            <span class="bx material-icons-outlined">
+                                more_vert
+                            </span>
+                        </li>
+                    </ul>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <div class="balance">
-            <div class="donut-chart">
-                <div class="chart-container">
-                    <canvas id="myChart"></canvas>
-                </div>
-            </div>
-            <div class="total-assets">
-                <!-- <div class="assets-texts">
-                    <h2>Revenue</h2>
-                    <h1>$245,234.09</h1>
-                </div> -->
-                <div class="assets-elements">
-                </div>
-            </div>
-        </div>
-    </main>
+        </main>
+    </section>
+    <!-- MAIN -->
+
 
     <!-- Footer -->
     <div class="footer flex flex-sb">

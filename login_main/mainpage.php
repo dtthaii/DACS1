@@ -42,14 +42,18 @@ if (!empty($_SESSION["id"])) {
     <!-- <a href="logout.php"><input class="block-button" type="button" value="Log Out" id="connectWallet"></a> -->
     <ul>
       <li>
-        <img src="/CRYPTO FINANCE/image/prf.png" class="profile">
+        <img src="/CRYPTO FINANCE/image/nfts21-img.png" class="profile">
         <ul>
           <li class="sub-item">
-            <span class="material-icons-outlined"> manage_accounts </span>
+            <a href="/CRYPTO FINANCE/cart/cart.html"><span class="material-icons-outlined">shopping_cart</span></a>
+            <p>Shopping Cart</p>
+          </li>
+          <li class="sub-item">
+            <a href="/CRYPTO FINANCE/account details/index.html"><span class="material-icons-outlined"> manage_accounts </span></a>
             <p>Update Profile</p>
           </li>
           <li class="sub-item">
-            <a href="logout.php"><span class="material-icons-outlined"> logout </span></a>
+            <a href="/CRYPTO FINANCE/login_main/logout.php"><span class="material-icons-outlined"> logout </span></a>
             <p>Logout</p>
           </li>
         </ul>

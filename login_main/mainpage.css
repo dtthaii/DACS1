@@ -155,6 +155,10 @@ li ul {
     display: none;
 }
 
+li img {
+    border-radius: 2rem;
+  }
+
 ul li:hover>ul,
 ul li ul:hover {
     visibility: visible;
@@ -522,7 +526,7 @@ ul li ul:hover {
 .get-notified .block-button {
     position: absolute;
     right: 5px;
-    top: 4px;
+    /* top: 4px; */
     border-radius: 50px;
 }
 /* End Subscribe Section */
@@ -645,7 +649,7 @@ ul li ul:hover {
         flex: 0 0 40%;
     }
     .block-button {
-        padding: 10px 18px;
+        padding: 10px 18px; 
     } 
     .hero-content .block-button {
         padding: 12px 35px;
@@ -668,7 +672,7 @@ ul li ul:hover {
     .hero-overlay img:nth-of-type(7) {
         display: none;
     }
-    .feature-container {
+    .features-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
@@ -678,9 +682,9 @@ ul li ul:hover {
     .feature {
         width: 100%;
     }
-    .feature p{
+    /* .feature p{
         display: none;
-    }
+    } */
     .feature:last-child {
         margin: 0 50%;
     }
@@ -700,7 +704,7 @@ ul li ul:hover {
 
 @media (max-width: 740px) {
     html {
-        font-size: 8px;
+        font-size: 8px; 
     }
     .hero {
         height: 70vh;
@@ -761,7 +765,7 @@ ul li ul:hover {
     .menu-btn-icon::after,
     .menu-btn-icon::before {
         width: 25px;
-        height: 25px;
+        height: 2px;
         background-color: var(--text);
         display: inline-block;
         transition: all 0.2s;
@@ -853,7 +857,7 @@ ul li ul:hover {
     .hero-heading {
         line-height: 50px;
     }
-    .feature-container,
+    .features-container,
     .investors-container {
         grid-template-columns: 1fr;
     }
@@ -866,9 +870,12 @@ ul li ul:hover {
     .feature {
         height: 360px;
     }
-    .offers-image,
+    .offers-image {
+        height: 320px;
+    }
     .account-image {
-        height: 275px;
+        width: 120%;
+        height: 400px;
     }
     .investor {
         margin: 18px 0;
@@ -881,6 +888,7 @@ ul li ul:hover {
     }
     .footer {
         padding: 15px 25px;
+        justify-content: center;
     }
     .footer .brand {
         display: none;

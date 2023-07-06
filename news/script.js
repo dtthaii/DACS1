@@ -33,6 +33,27 @@ $(document).on("scroll", function() {
     $(".menu-btn").toggleClass("active");
 });
 
+const search = () => {
+    const searchbox = document.getElementById("search-item").value.toUpperCase()
+    const storeitems = document.getElementById("blog-container")
+    const item = document.querySelectorAll(".blog-box")
+    const blogname = storeitems.getElementsByTagName("h3")
+
+    for(var i = 0; i < blogname.length; i++) {
+        let match = item[i].getElementsByTagName('h3')[0];
+
+        if(match) {
+            let textValue = match.textContent || match.innerHTML
+
+            if(textValue.toUpperCase().indexOf(searchbox) > -1) {
+                item[i].style.display = "";
+            } else {
+                item[i].style.display = "none";
+            }
+        }
+    }
+}
+
     
     // //Metamask
     // const forwarderOrigin = 'http://localhost:5500';

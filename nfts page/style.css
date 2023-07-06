@@ -275,6 +275,10 @@ li ul {
   display: none;
 }
 
+li img {
+  border-radius: 2rem;
+}
+
 ul li:hover>ul,
 ul li ul:hover {
   visibility: visible;
@@ -334,96 +338,98 @@ ul li ul:hover {
 
   /* End Navbar */
 
-  /* hero section */
-  
-  /* .hero {
-    background-image: url(/CRYPTO\ FINANCE/image/hero-bg.png);
-    background-attachment: fixed;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 100vh;
-    max-height: 800px;
-    color: var(--text);
+#nfts1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.hero-overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(180deg,
-    rgba(16, 8, 25, 0.3) 0%,
-    var(--bg) 100%);
-    backdrop-filter: blur(20px);
-    z-index: 1;
-} */
-
-    /* end hero section */
-
-    /* nfts section */
-
-.nfts1 .box-container {
-    padding: 5%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2.5rem;
+.box-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  flex-wrap: wrap;
 }
+.blog-box {
+  /* display: block;
+  width: 350px;
+  background-color: var(--card-background);
+  border: 1px solid white;
+  margin: 5px;
+  cursor: pointer; */
 
-.nfts1 .box-container .box {
-    padding: 0m;
-    background: #fff;
-    outline: 1rem solid rgba(0, 0, 0, .1);;
-    outline-offset: -1rem;
-    text-align: center;
-    box-shadow:  0 .5rem 1.5rem rga(0, 0, 0, .1);
-    transition: .2s linear;
-    cursor: pointer;
+  margin: 5px;
+  /* padding: 0 2rem; */
+  width: 350px;
+  /* background: #fff; */
+  outline: .2rem solid #fff;
+  outline-offset: 0;
+  text-align: center;
+  box-shadow: 0 .5rem 1.5rem rga(0, 0, 0, .1);
+  transition: .2s linear;
 }
-
-.nfts1 .box-container .box:hover {
-    outline: .2rem solid #141414;
-    outline-offset: 0rem;
+.blog-box:hover {
+  /* border: 2px solid var(--curtain-color); */
+  background: #fff;
+  /* outline: .2rem solid #000; */
+  /* outline-offset: -1rem; */
+  cursor: pointer;
+}
+.box-img {
+  width: 100%;
+  height: 80%;
+  max-width: fit-content;
+}
+.box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.nfts1 .box-container .box img {
-    width: 100%;
-    height: 80%;
+.box-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.box-text h3 {
+  color: var(--primary-1);
+  font-size: 2rem;
+  text-align: center;
 }
 
-
-.nfts1 .box-container .box h3 {
-    padding: 3% 5%;
-    font-size: 1.8rem;
-    line-height: 1.8;
-    color: var(--primary-1);
+.box-text h2 {
+  color: rgb(195, 195, 40);
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-.nfts1 .box-container .box h2 {
-    /* margin-right: 25%; */
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 16px;
-    color: var(--bg);
-    font-weight: 500;
-    margin-bottom: 10%;
+.pagination {
+  display: inline-block;
+  padding-top: 3%;
+  padding-bottom: 5%;
 }
 
-.nfts1 .box-container .box .id {
-    margin: 0;
-    font-size: 2rem;
-    color: #014677;
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 15px;
 }
 
-.nfts1 .box-container .box span {
-    font-weight: 700;
-    color: #FCD535;
-    margin-left: 20%;
-    font-size: 2rem;
-    
+.pagination a.active {
+  background-color: var(--primary-1);
+  color: white;
+  border-radius: 5px;
 }
-/* end nfts section */
+
+.pagination a:hover:not(.active) {
+  background-color: grey;
+  border-radius: 5px;
+}
+
 
 /* Footer */
 
@@ -443,4 +449,124 @@ ul li ul:hover {
     width: 18px;
 }
 /* End Footer */
+
+@media (max-width: 1000px) {
+  html {
+      font-size: 8px;
+  }
+  .navbar {
+      flex-direction: column;
+      height: 80vh;
+      background: var(--bg);
+      padding: 30px 0; 
+      border: 1px solid var(--primary-1);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      width: 94%;
+      margin: 0 2.5%;
+      border-top-color: transparent;
+      transition: 0.5s ease;
+      transform: translateY(-1300px);
+  }
+  .nav-links {
+      flex-direction: column;
+  }
+  .menu-btn {
+      display: block;
+      background-color: var(--primary-1);
+      height: 45px;
+      width: 45px;
+      position: fixed;
+      top: 22px;
+      right: 40px;
+      z-index: 2222;
+      border-radius: 50%;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+      text-align: center;
+      cursor: pointer;
+  }
+  .menu-btn-icon,
+  .menu-btn-icon::after,
+  .menu-btn-icon::before {
+      width: 25px;
+      height: 2px;
+      background-color: var(--text);
+      display: inline-block;
+      transition: all 0.2s;
+  }
+  .menu-btn-icon {
+      position: relative;
+      margin-top: 22px;
+  }
+
+  .menu-btn-icon::after,
+  .menu-btn-icon::before {
+      position: absolute;
+      content: "";
+      left: 0;
+  }
+  .menu-btn-icon::before {
+      top: 0.8rem;
+  }
+  .menu-btn-icon::after {
+      top: -0.8rem;
+  }
+  .menu-btn.active .menu-btn-icon {
+      background-color: transparent;
+  }
+
+  .menu-btn.active .menu-btn-icon::after {
+      transform: rotate(-135deg);
+      top: 0;
+  }
+  .menu-btn.active .menu-btn-icon::before {
+      transform: rotate(135deg);
+      top: 0;
+  }
+  .navbar.mobile {
+      transform: translateY(0);
+  }
+  .section {
+      padding: 20px 5px;
+  }
+  .offers-container,
+  .account-container {
+      flex-direction: column;
+  }
+  .offers-image,
+  .offers-content,
+  .account-image,
+  .account-content {
+      width: 100%;
+  }
+  .offers-image {
+      background-position: center;
+  }
+  .account-container {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  .account-content p {
+      width: 100%;
+  }
+  .subscribe-container img,
+  .investor img {
+      width: 180px;
+  }
+  .get-notified {
+      width: 65%;
+      margin: 40px 17.5%;
+  }
+  .get-notified input {
+      padding: 12px;
+  }
+  .get-notified .block-button {
+      top: 2px;
+      right: 2px;
+  }
+  .footer-menu img {
+      width: 14px;
+  }
+}
+
 

@@ -1,74 +1,238 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-:root {
-  --bg: #10081a;
-  --primary-1: #4ca9df;
-  --primary-2: #292e91;
-  --white: #fff;
-  --text: #e6d9f5;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 10px;
-}
-
-body {
-    background: var(--bg);
-    height: 100vh;
-    overflow-x: hidden;
-    color: var(--white);
-}
-.flex {
-    display: flex;
+.pay-content {
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+    /* background-color: #fff; */
+    padding: 0 9% 7rem;
+    padding-top: 8rem;
     align-items: center;
-    justify-content: center;
 }
 
-.flex-c {
+.pay-content .title {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding-bottom: 4rem;
 }
 
-.flex-sb {
+.pay-content .title .icon {
+    margin-left: 20%;
+    background-color: #4ca9df;    
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.pay-content .title i  {
+    font-size: 2rem;
+}
+
+.pay-content .title .name {
+    font-size: 2rem;
+    margin: auto 0;
+    padding-left: 1%;
+}
+
+.pay-fill {
+    /* position: relative;
+    left: 30%; */
+    /* transform: translateX(-50%); */
+    margin: 0 auto;
+    width: 70%;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.pay-fill .edit {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+.pay-fill .edit button {
+    color: rgb(2, 94, 255);
+    font-size: 1.5rem;
+    padding: .5rem 2rem;
+    border-radius: 5rem;
+    margin: auto 0;
+}
+
+.pay-fill .edit button:hover {
+    cursor: pointer;
+    background-color: rgb(2, 94, 255);
+    color: #fff;
+}
+
+.pay-fill .edit button i {
+    padding: 0 1.5rem 0 0 ;
+}
+
+.bankCard {
+    padding: 2rem;
+    border-radius: .8rem;
+    background-color: rgb(251, 251, 251);
+    border: solid 2px rgba(102, 102, 102, .3);
+}
+
+.pay-fill .left .name{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1e2a52;
+    padding-bottom: .7rem ;
+
+}
+
+.pay-fill .left .attention {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #7e88a7;
+}
+
+.information {
+    padding-top: 3rem;
+    display: flex;
+}
+
+.cvv .fill {
+    display: flex;
+    margin: auto 0;
+    height: 100%;
+    width: 100%;
+    border-radius: .8rem;
+}
+
+.input-in4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(30, 42, 82);
+    height: 100%;
+    width: 100%;
+    border-radius: .8rem;
+    text-align: center;
+    display: block;
+    border: solid 2px rgba(102, 102, 102, .3);
+    margin: 0 auto;
+}
+
+.date .fill {
+    width: 100%;
+    height: 100%;   
+    display: flex;
     justify-content: space-between;
 }
-.w-100 {
+
+
+.pass .fill {
+    display: flex;
+    margin: auto 0;
+    height: 100%;
     width: 100%;
-}
-.section {
-    padding: 60px 10px;
+    border-radius: .8rem;
+} 
+
+/* 
+.input-in4:hover {
+    border: solid 2px rgb(2, 94, 255);
+    background-color: rgb(238, 244, 254);
+} */
+
+.input-in4:focus {
+    border: solid 2px #4ca9df;
+    background-color: rgb(238, 244, 254);
 }
 
-*::selection{
-    background-color: var(--primary-1);
-    color: var(--black);
-  }
-  
-  *::-webkit-scrollbar{
-    height: .5rem;
-    width:1rem;
-  }
-  
-  *::-webkit-scrollbar-track{
-    background-color: transparent;
-  }
-  
-  *::-webkit-scrollbar-thumb{
-    background-color:var(--primary-1);
-  }
-  
+.date .fill .date-input {
+    margin: auto 0;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    border-radius: .8rem;
+}
+
+
+/* 
+.date .fill .date-input input {
+    height: 100%;
+    width: 80%;
+    margin: auto 0;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(30, 42, 82);
+} */
+
+.pay-button .pay-now {
+    width: 100%;
+    height: 5rem;
+    margin-top: 4rem;
+    border-radius: .8rem;
+    background-color: #025EFF;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+.pay-button .pay-now:hover {
+    cursor: pointer;   
+}
+
+.pay-button .pay-withM {
+    background-color: #025EFF;
+    width: 100%;
+    height: 5rem;
+    margin-top: 2rem;
+    border-radius: .8rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+.pay-button .pay-withM:hover{
+    cursor: pointer;
+}
+
+.pay-button .pay-withM button {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.fill-animation {
+    position: relative;
+}
+
+.fill-animation i {
+    position: absolute;
+    font-size: 3rem;
+    right: 2rem;
+    color: #a4aaba;
+    margin: auto 0;
+}
+
+.pay-button .or {
+    color: black;
+    font-size: 1.5rem;
+    text-align: center; 
+    padding-top: 2rem;
+}
+
+@media (max-width: 700px) {
+    /* .attention {
+        display: none;
+    } */
+    
+    .end {
+        display: none;
+    }
+
+    .input-in4 {
+        padding: 8px;
+        margin-top: 5px;
+    }
+}
+@media (max-width: 1023px) {
+    .pay-fill {
+        width: 100%;
+    }
+}
 
 /* Navbar */
 .navbar {
@@ -119,6 +283,97 @@ body {
     color: var(--white);
     font-size: 1.6rem;
     cursor: pointer;
+}
+
+/* profile */
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 10%;
+}
+
+li {
+    list-style-type: none;
+    position: relative;
+    padding: 0.625rem 0 0.5rem;
+}
+
+li ul {
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--black);
+    align-items: center;
+    transition: all 0.5s ease;
+    width: 15rem;
+    right: -3rem;
+    top: 4.5rem;
+    border-radius: 0.325rem;
+    gap: 0;
+    padding: 1rem 0rem;
+    opacity: 0;
+    box-shadow: 0px 0px 100px rgba(20, 18, 18, 0.25);
+    display: none;
+}
+
+ul li:hover>ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+
+.material-icons-outlined {
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.material-icons-outlined:hover {
+    color: var(--primary-1);
+    transform: scale(1.25) translateY(-4px);
+    cursor: pointer;
+}
+
+
+.profile {
+    height: 3rem;
+    width: auto;
+    cursor: pointer;
+}
+
+.sub-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.725rem;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+
+.sub-item:hover {
+    background-color: rgba(232, 232, 232, 0.4);
+}
+
+.sub-item:hover .material-icons-outlined {
+    color: var(--primary-1);
+    transform: scale(1.08) translateY(-2px);
+    cursor: pointer;
+}
+
+.sub-item:hover p {
+    color: white;
+    cursor: pointer;
+}
+
+.sub-item p {
+    font-size: 0.85rem;
+    color: #888888;
+    font-weight: 500;
+    margin: 0.4rem 0;
+    flex: 1;
 }
 /* End Navbar */
 
@@ -679,7 +934,7 @@ body {
         position: relative;
         margin-top: 22px;
     }
-  
+
     .menu-btn-icon::after,
     .menu-btn-icon::before {
         position: absolute;
@@ -695,7 +950,7 @@ body {
     .menu-btn.active .menu-btn-icon {
         background-color: transparent;
     }
-  
+
     .menu-btn.active .menu-btn-icon::after {
         transform: rotate(-135deg);
         top: 0;

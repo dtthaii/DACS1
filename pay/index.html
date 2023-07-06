@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CRYPTO FINANCE/pay/css/grid.css">
+    <link rel="stylesheet" href="/CRYPTO FINANCE/pay/css/pay.css">
+    <!-- <link rel="stylesheet" href="/CRYPTO FINANCE/pay/css/style.css"> -->
+    <link rel="stylesheet" href="/CRYPTO FINANCE/news/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Mobile Menu -->
+    <div class="menu-btn">
+        <span class="menu-btn-icon">&nbsp;</span>
+    </div>
+    <!-- End Mobile Menu -->
+
+    <!-- Navbar -->
+    <div class="navbar flex flex-sb">
+        <div class="brand"><a href="/CRYPTO FINANCE/login_main/mainpage.php">BlockVerse</a></div>
+        <div class="nav-links flex flex-sb">
+            <a href="/CRYPTO FINANCE/login_main/mainpage.php" class="nav-link">Home</a>
+            <a href="/CRYPTO FINANCE/overview/index.html" class="nav-link">Market</a>
+            <a href="/CRYPTO FINANCE/nfts page/index.html" class="nav-link">NFTs</a>
+            <a href="/CRYPTO FINANCE/wallet2.0/index.html" class="nav-link">Wallet</a>
+            <a href="/CRYPTO FINANCE/news/" class="nav-link">News</a>
+        </div>
+        <!-- <input class="block-button" type="button" value="Connect Wallet" id="connectWallet"> -->
+
+        <form class="form">
+            <label for="search">
+                <input class="input" type="text" required="" placeholder="Search coin" id="search">
+                <div class="fancy-bg"></div>
+                <div class="search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                        class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                        <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <button class="close-btn" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </label>
+        </form>
+
+        <ul>
+            <li>
+                <img src="/CRYPTO FINANCE/image/nfts21-img.png" class="profile">
+                <ul>
+                    <li class="sub-item">
+                        <a href="/CRYPTO FINANCE/cart/cart.html"><span class="material-icons-outlined">shopping_cart</span></a>
+                        <p>Shopping Cart</p>
+                      </li>
+                    <li class="sub-item">
+                        <a href="/CRYPTO FINANCE/account details/index.html"><span class="material-icons-outlined">
+                                manage_accounts </span></a>
+                        <p>Update Profile</p>
+                    </li>
+                    <li class="sub-item">
+                        <a href="/CRYPTO FINANCE/login_main/logout.php"><span class="material-icons-outlined"> logout
+                            </span></a>
+                        <p>Logout</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- End Navbar -->
+
+
+    <section class="container">
+
+        <div class="container-box">
+            <!-- <div class="title">
+                <a href="#">Bookstore</a>
+            </div> -->
+
+            <div class="info">
+                <div class="user-info">
+                    <div class="header">
+                        <h2>Your information</h2>
+                        <a href="/CRYPTO FINANCE/login_main/signin.php" class="login">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <p>Log out</p>
+                        </a>
+                    </div>
+
+                    <div class="email ct">
+                        <input type="text" required="" name="text" class="input">
+                        <label class="label">Email</label>
+                    </div>
+
+                    <div class="fullname ct">
+                        <input type="text" required="" name="text" class="input">
+                        <label class="label">Full name</label>
+                    </div>
+
+                    <div class="phone-number ct">
+                        <input type="text" required="" name="text" class="input">
+                        <label class="label">Phone number</label>
+                    </div>
+
+                    <div class="address ct">
+                        <input type="text" required="" name="text" class="input">
+                        <label class="label">Address</label>
+                    </div>
+
+                    <div class="city_province ct">
+                        <input type="text" required="" name="text" class="input">
+                        <label class="label">Province</label>
+                    </div>
+
+                    <div class="district ct">
+                        <input type="text" required="" name="text" class="input">
+                        <label class="label">City</label>
+                    </div>
+
+                    <div class="note ct">
+                        <textarea class="textarea" cols="20" rows="3"></textarea>
+                        <label class="label">Message</label>
+                    </div>
+                </div>
+
+                <div class="others">
+
+                    <div class="user-info">
+                        <div class="header">
+                            <h2>Your credit card's information</h2>
+                            <a href="" class="login" id="connectWallet">
+                                <i class="fa-regular fa-credit-card"></i>
+                                <p>Connect Wallet</p>
+                            </a>
+                            <!-- <input class="block-button" type="button" value="Connect Wallet" id="connectWallet"> -->
+                        </div>
+
+                        <div class="email ct">
+                            <input type="text" required="" name="text" class="input">
+                            <label class="label">Card Number</label>
+                        </div>
+
+                        <div class="fullname ct">
+                            <input type="text" required="" name="text" class="input">
+                            <label class="label">CVV Number</label>
+                        </div>
+
+                        <div class="phone-number ct">
+                            <input type="text" required="" name="text" class="input">
+                            <label class="label">Expiry Date</label>
+                        </div>
+
+                        <div class="address ct">
+                            <input type="password" required="" name="text" class="input">
+                            <label class="label">Password</label>
+                        </div>
+
+                        <!-- <div class="city_province ct">
+                            <input type="text" required="" name="text" class="input">
+                            <label class="label">Province</label>
+                        </div>
+    
+                        <div class="district ct">
+                            <input type="text" required="" name="text" class="input">
+                            <label class="label">City</label>
+                        </div>
+    
+                        <div class="note ct">
+                            <textarea class="textarea" cols="20" rows="3"></textarea>
+                            <label class="label">Message</label>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-box right">
+            <div class="container__product">
+                <div class="quantity">
+                    <h1>Order (3 NFTs)</h1>
+                </div>
+
+                <div class="products">
+                    <div class="info-product">
+                        <div class="item">
+                            <img width="100px" src="/CRYPTO FINANCE/image/nfts15-img.png" alt="">
+                            <div class="quantity-no">1</div>
+                        </div>
+                        <p>Bean #9023</p>
+
+                    </div>
+
+                    <div class="price" id="price">
+                        <span>127.9 USD</span>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="info-product">
+                        <div class="item">
+                            <img width="100px" src="/CRYPTO FINANCE/image/nfts15-img.png" alt="">
+                            <div class="quantity-no">1</div>
+                        </div>
+                        <p>Monkey Gangs #1253</p>
+
+                    </div>
+
+                    <div class="price" id="price">
+                        <span>45.73 USD</span>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="info-product">
+                        <div class="item">
+                            <img width="100px" src="/CRYPTO FINANCE/image/nfts15-img.png" alt="">
+                            <div class="quantity-no">1</div>
+                        </div>
+                        <p>Doggy #9053</p>
+
+                    </div>
+
+                    <div class="price" id="price">
+                        <span>435.97 USD</span>
+                    </div>
+                </div>
+
+                <!-- <div class="discount">
+                    <div class="discount-input ct">
+                        <input type="text" class="input" required="" name="text">
+                        <label class="label">Enter the discount code</label>
+                    </div>
+
+                    <a href="#" class="btn">Apply</a>
+                </div> -->
+
+                <div class="calculate">
+                    <div>
+                        <p>Provisional</p>
+                        <span>609.6 USD</span>
+                    </div>
+
+                    <div>
+                        <p>Transport fee</p>
+                        <span>_</span>
+                    </div>
+
+                    <div class="total">
+                        <p>Total</p>
+                        <span>609.6 USD</span>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <a href="#" class="back">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>Quay về giỏ hàng</span>
+                    </a>
+                    <!-- <a href="#" class="btn" onclick="openPopup()">Pay Now</a> -->
+                    <button type="submit" class="btn" onclick="openPopup()">Pay Now</button>
+                    <div class="popup" id="popup">
+                        <img src="../image/404-tick.png" alt="">
+                        <h2>Thank You!</h2>
+                        <p>Your details has been successfully submitted. Thanks!</p>
+                        <button type="button" onclick="closePopup()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <div class="footer flex flex-sb">
+        <div class="brand">BlockVerse</div>
+        <div class="footer-menu flex flex-sb">
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-1.png" alt="Social">
+            </a>
+
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-2.png" alt="Social">
+            </a>
+
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-3.png" alt="Social">
+            </a>
+
+            <a href="#" class="social">
+                <img src="/CRYPTO FINANCE/image/footer-4.png" alt="Social">
+            </a>
+        </div>
+    </div> -->
+    <!-- End Footer -->
+
+
+
+    <script>
+
+        const forwarderOrigin = 'http://localhost:5500';
+
+        const initialize = () => {
+            const connectButton = document.getElementById('connectWallet');
+            const { ethereum } = window;
+            const onboardMetaMaskClient = async () => {
+                if (!isMetamaskInstalled()) {
+                    // prompt the user to install it
+                    console.log("MetaMask is not installed :(");
+                    connectButton.value = "Click here to install metamask";
+                    connectButton.onclick = installMetaMask;
+                } else {
+                    console.log("MetaMask is installed Hurray!!!!!");
+                    connectButton.onclick = connectMetaMask;
+                }
+            }
+
+            const connectMetaMask = async () => {
+                connectButton.disabled = true;
+                try {
+                    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+                    connectButton.value = "Connected";
+                    console.log("accounts: ", accounts);
+                    connectButton.disabled = false;
+                } catch (err) {
+                    console.error("error occured while connecting to MetaMask: ", err)
+                }
+            }
+
+            const isMetamaskInstalled = () => {
+                return ethereum && ethereum.isMetaMask;
+            }
+
+            const installMetaMask = () => {
+                const onboarding = new MetaMaskOnboarding({ forwarderOrigin });
+                connectButton.value = "Installation in progress";
+                connectButton.disabled = true;
+                onboarding.startOnboarding();
+            }
+
+            onboardMetaMaskClient();
+        };
+
+        window.addEventListener('DOMContentLoaded', initialize);
+
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+
+</html>

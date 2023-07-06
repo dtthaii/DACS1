@@ -16,9 +16,10 @@
     --border-radius-2: 6px;
 }
 
-*,
-*::after,
-*::before {
+/* *, */
+/* *::after, */
+/* *::before  */
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -90,7 +91,7 @@ body {
     color: var(--text);
 }
 .navbar-solid {
-    background: rgba(16, 8, 26, 1);
+    background: black;
     transition: 0.3s linear;
     box-shadow: 1px 1px 0px rgba(252, 240, 255, 0.2);
 }
@@ -286,6 +287,10 @@ li ul {
     display: none;
 }
 
+li img {
+    border-radius: 2rem;
+  }
+
 ul li:hover>ul,
 ul li ul:hover {
     visibility: visible;
@@ -360,14 +365,16 @@ ul li ul:hover {
 
 .blog-box {
     width: 350px;
-    background-color: rgba(16, 8, 26, 1);
+    background-color: var(--bg);
+    /* background-color: rgba(16, 8, 26, 1); */
     border: 1px solid var(--primary-1);
     border-radius: 10px;
     /* border-radius: 10px; */
     margin: 10px;
 }
 .blog-box:hover {
-    border: 2px solid var(--curtain-color);
+    border: #fff;
+    cursor: pointer;
 }
 .blog-box a {
     text-decoration: none;
@@ -391,18 +398,18 @@ ul li ul:hover {
     flex-direction: column;
 }
 .blog-text span {
-    color: var(--text);
+    color: #fff;
     font-size: 0.8rem;
 }
 .blog-text .blog-title{
     margin: 0;
 }
 .blog-text .blog-title:hover{
-    color: var(--primary-1);
-    transition: all ease 0.3s;
+    color: var(--active-color);
+    transition: all ease 0.1s;
 } 
 .blog-text p {
-    color:  var(--text);
+    color:  #fff;
     opacity: 0.7;
     font-size: 0.9rem;
     display: -webkit-box;
@@ -416,13 +423,37 @@ ul li ul:hover {
     opacity: 1;
 }
 .blog-text a {
-    color: var(--text);
+    color: #fff;
 }
 .blog-text a:hover{
     color: var(--primary-1);
     transition: all ease 0.3s;
     cursor: pointer;
 }
+
+.pagination {
+    display: inline-block;
+    padding: 50px;
+    padding-left: 40%;
+  }
+  
+  .pagination a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .pagination a.active {
+    background-color: var(--primary-1);
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: grey;
+    border-radius: 5px;
+  }
 /* Footer */
 
 .footer {

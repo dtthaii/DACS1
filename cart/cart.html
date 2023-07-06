@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart</title>
+  <link rel="stylesheet" href="../cart/cart.css">
+  <link rel="stylesheet" href="/CRYPTO FINANCE/pay/css/grid.css">
+  <link rel="stylesheet" href="/CRYPTO FINANCE/pay/css/pay.css">
+  <!-- <link rel="stylesheet" href="/CRYPTO FINANCE/pay/css/style.css"> -->
+  <link rel="stylesheet" href="/CRYPTO FINANCE/news/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <!-- Mobile Menu -->
+  <div class="menu-btn">
+    <span class="menu-btn-icon">&nbsp;</span>
+  </div>
+  <!-- End Mobile Menu -->
+
+  <!-- Navbar -->
+  <div class="navbar flex flex-sb">
+    <div class="brand"><a href="/CRYPTO FINANCE/login_main/mainpage.php">BlockVerse</a></div>
+    <div class="nav-links flex flex-sb">
+      <a href="/CRYPTO FINANCE/login_main/mainpage.php" class="nav-link">Home</a>
+      <a href="/CRYPTO FINANCE/overview/index.html" class="nav-link">Market</a>
+      <a href="/CRYPTO FINANCE/nfts page/index.html" class="nav-link">NFTs</a>
+      <a href="/CRYPTO FINANCE/wallet2.0/index.html" class="nav-link">Wallet</a>
+      <a href="/CRYPTO FINANCE/news/" class="nav-link">News</a>
+    </div>
+    <!-- <input class="block-button" type="button" value="Connect Wallet" id="connectWallet"> -->
+
+    <form class="form">
+      <label for="search">
+        <input class="input" type="text" required="" placeholder="Search coin" id="search">
+        <div class="fancy-bg"></div>
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"
+            class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
+        </div>
+        <button class="close-btn" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </label>
+    </form>
+
+    <ul>
+      <li>
+        <img src="/CRYPTO FINANCE/image/nfts21-img.png" class="profile">
+        <ul>
+
+          <li class="sub-item">
+            <a href="/CRYPTO FINANCE/cart/cart.html"><span class="material-icons-outlined">shopping_cart</span></a>
+            <p>Shopping Cart</p>
+          </li>
+          <li class="sub-item">
+            <a href="/CRYPTO FINANCE/account details/index.html"><span class="material-icons-outlined"> manage_accounts
+              </span></a>
+            <p>Update Profile</p>
+          </li>
+          <li class="sub-item">
+            <a href="/CRYPTO FINANCE/login_main/logout.php"><span class="material-icons-outlined"> logout </span></a>
+            <p>Logout</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- End Navbar -->
+
+  <div class="heading">
+    <h3>shopping cart</h3>
+  </div>
+
+  <section class="products">
+
+    <!-- <h1 class="title">your cart</h1> -->
+
+    <div class="cart-total">
+      <p>Grand Total : <span>$609.6/-</span></p>
+      <a href="../pay/index.html" class="btn">checkout orders</a>
+    </div>
+    </div>
+
+    <div class="box-container">
+
+      <div class="box">
+        <a href="#" class="fas fa-eye"></a>
+        <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+        <img src="../image/nfts15-img.png" alt="">
+        <div class="name">Bean #9023</div>
+        <div class="flex">
+          <div class="price"><span>$</span>127.9</div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1"
+            onkeypress="if(this.value.length == 2) return false;">
+          <button type="submit" class="fas fa-edit"></button>
+        </div>
+        <div class="sub-total">sub total : <span>$127.9</span></div>
+      </div>
+
+      <div class="box">
+        <a href="#" class="fas fa-eye"></a>
+        <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+        <img src="../image/nfts19.jpg" alt="">
+        <div class="name">Monkey Gangs #1253</div>
+        <div class="flex">
+          <div class="price"><span>$</span>45.73</div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1"
+            onkeypress="if(this.value.length == 2) return false;">
+          <button type="submit" class="fas fa-edit"></button>
+        </div>
+        <div class="sub-total">sub total : <span>$45.73</span></div>
+      </div>
+
+      <div class="box">
+        <a href="#" class="fas fa-eye"></a>
+        <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+        <img src="../image/nfts25-img.png" alt="">
+        <div class="name">Doggy #9053</div>
+        <div class="flex">
+          <div class="price"><span>$</span>435.97</div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1"
+            onkeypress="if(this.value.length == 2) return false;">
+          <button type="submit" class="fas fa-edit"></button>
+        </div>
+        <div class="sub-total">sub total : <span>$435.97</span></div>
+      </div>
+
+    </div>
+
+    <div class="more-btn">
+      <a href="#" class="delete-btn" onclick="return confirm('delete all from cart?');">delete all</a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <div class="footer flex flex-sb">
+    <div class="brand">BlockVerse</div>
+    <div class="footer-menu flex flex-sb">
+      <a href="#" class="social">
+        <img src="/CRYPTO FINANCE/image/footer-1.png" alt="Social">
+      </a>
+
+      <a href="#" class="social">
+        <img src="/CRYPTO FINANCE/image/footer-2.png" alt="Social">
+      </a>
+
+      <a href="#" class="social">
+        <img src="/CRYPTO FINANCE/image/footer-3.png" alt="Social">
+      </a>
+
+      <a href="#" class="social">
+        <img src="/CRYPTO FINANCE/image/footer-4.png" alt="Social">
+      </a>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+</body>
+
+</html>
